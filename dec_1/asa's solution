@@ -1,0 +1,6 @@
+with open('/home/113178/checkouts/input.txt') as _fl:
+    txt = _fl.read()
+print('max Cals on single elf', max(sum(int(sub) for sub in x.split('\n')
+         if sub) for x in txt.split('\n\n')))
+print('Cals on top 3 elves', sum(sorted(sum(int(sub) for sub in x.split('\n') if sub)
+          for x in txt.split('\n\n'))[-3:]))
